@@ -60,211 +60,229 @@
             </div>
         </section>
         <section class="filter">
-            <div class="filter__title">
-                <h2>Каталог</h2>
+            <div class="container">
+                <h2 class="filter__title">Каталог</h2>
                 <p>Обирай категорію, фільтруй за ціною та розміром — знайди свій образ.</p>
                 <div class="filter__mains-buttons">
-                    <button>Усе</button>
-                    <button>Кроссівки</button>
-                    <button>Худі</button>
-                    <button>Кепки</button>
-                    <button>Футболки</button>
+                    <button class="filter__mains-item">Усе</button>
+                    <button class="filter__mains-item">Кроссівки</button>
+                    <button class="filter__mains-item">Худі</button>
+                    <button class="filter__mains-item">Кепки</button>
+                    <button class="filter__mains-item">Футболки</button>
                 </div>
-                <div>
-                    <div>
+                <div class="filter__sort">
+                    <div class="filter__sort-by">
                         <label>Сортування</label>
                         <br>
                         <select>
-                        <option>За замовчуванням</option>
+                            <option>За замовчуванням</option>
                         </select>
                     </div>
-                    <div>
+                    <div class="filter__sort-instock">
                         <input type="checkbox" >
                         <label>Тільки в наявності</label>
                     </div>
-                    <button type="reset">Скинути фільтри</button>
+                    <button type="reset" class="filter__sort-reset">Скинути фільтри</button>
                 </div>
             </div>
         </section>
-        <section>
-            <div>
-                <span>xx товарів</span>
-                <div>
-                    <article>
-                        <img src="" alt="">
+
+        <section class="products">
+            <div class="container">
+                <span class="products__amount">xx товарів</span>
+                <div class="products__cards">
+                    <article class="products__cards-item">
+                        <img src="" alt="" class="item__img">
                         <div>
-                            <h3>Кросівки</h3>
-                            <p>Кросівки Vortex Runner</p>
-                            <span>2 399 ₴</span>
-                            <button>У кошик</button>
+                            <h3 class="item__name">Кросівки</h3>
+                            <p class="item_category">Кросівки Vortex Runner</p>
+                            <span class="item__price">2 399 ₴</span>
+                            <button class="item__button">У кошик</button>
                         </div>
                     </article>
-                    <article>
-                        <img src="" alt="">
+
+                    <article class="products__cards-item">
+                        <img src="" alt="" class="item__img">
                         <div></div>
                         <div>
-                            <h3>Кросівки</h3>
-                            <p>Кросівки Midnight Court</p>
-                            <span>1 899 ₴</span>
-                            <button>У кошик</button>
+                            <h3 class="item_category">Кросівки</h3>
+                            <p class="item__name">Кросівки Midnight Court</p>
+                            <span class="item__price">1 899 ₴</span>
+                            <button class="item__button">У кошик</button>
                         </div>
                     </article>
-                    <article>
-                        <img src="" alt="">
+
+                    <article class="products__cards-item">
+                        <img src="" alt="" class="item__img">
                         <div></div>
                         <div>
-                            <h3>Кросівки</h3>
-                            <p>Кросівки Lime Pulse</p>
-                            <span>2 199 ₴</span>
-                            <button>Не має в наявності</button>
+                            <h3 class="item__category">Кросівки</h3>
+                            <p class="item__name">Кросівки Lime Pulse</p>
+                            <span class="item__price">2 199 ₴</span>
+                            <button class="item__button">Не має в наявності</button>
                         </div>
                     </article>
-                    <article>
-                        <img src="" alt="">
+
+                    <article class="products__cards-item">
+                        <img src="" alt="" class="item__img">
                         <div>
-                            <h3>Кросівки</h3>
-                            <p>Кросівки Steel Frame</p>
-                            <span>2 650 ₴ </span>
-                            <button>У кошик</button>
+                            <h3 class="item_category">Кросівки</h3>
+                            <p class="item__name">Кросівки Steel Frame</p>
+                            <span class="item__price">2 650 ₴ </span>
+                            <button class="item__button">У кошик</button>
                         </div>
                     </article>
-                    <article>
-                        <img src="" alt="">
+
+                    <article class="products__cards-item">
+                        <img src="" alt="" class="item__img">
                         <div></div>
                         <div>
-                            <h3>Худі</h3>
-                            <p>Худі Blockletter</p>
-                            <span>1 450 ₴</span>
-                            <button>У кошик</button>
+                            <h3 class="item_category">Худі</h3>
+                            <p class="item__name">Худі Blockletter</p>
+                            <span class="item__price">1 450 ₴</span>
+                            <button class="item__button">У кошик</button>
                         </div>
                     </article>
-                    <article>
-                        <img src="" alt="">
+
+                    <article class="products__cards-item">
+                        <img src="" alt="" class="item__img">
                         <div></div>
                         <div>
-                            <h3>Худі</h3>
-                            <p>Худі Cloudwash</p>
-                            <span>1 590 ₴</span>
-                            <button>У кошик</button>
+                            <h3 class="item_category">Худі</h3>
+                            <p class="item__name">Худі Cloudwash</p>
+                            <span class="item__price">1 590 ₴</span>
+                            <button class="item__button">У кошик</button>
                         </div>
                     </article>
-                    <article>
-                        <img src="" alt="">
+
+                    <article class="products__cards-item">
+                        <img src="" alt="" class="item__img">
                         <div>
-                            <h3>Худі</h3>
-                            <p>Худі Night Signal</p>
-                            <span>1 690 ₴</span>
-                            <button>Не має в наявності</button>
+                            <h3 class="item_category">Худі</h3>
+                            <p class="item__name">Худі Night Signal</p>
+                            <span class="item__price">1 690 ₴</span>
+                            <button class="item__button">Не має в наявності</button>
                         </div>
                     </article>
-                    <article>
-                        <img src="" alt="">
+
+                    <article class="products__cards-item">
+                        <img src="" alt="" class="item__img">
                         <div></div>
                         <div>
-                            <h3>Худі</h3>
-                            <p>Худі Concrete</p>
-                            <span>1 380 ₴</span>
-                            <button>У кошик</button>
+                            <h3 class="item_category">Худі</h3>
+                            <p class="item__name">Худі Concrete</p>
+                            <span class="item__price">1 380 ₴</span>
+                            <button class="item__button">У кошик</button>
                         </div>
                     </article>
-                    <article>
-                        <img src="" alt="">
+
+                    <article class="products__cards-item">
+                        <img src="" alt="" class="item__img">
                         <div></div>
                         <div>
-                            <h3>Кепки</h3>
-                            <p>Кепка Low Arc</p>
-                            <span>599 ₴</span>
-                            <button>У кошик</button>
+                            <h3 class="item_category">Кепки</h3>
+                            <p class="item__name">Кепка Low Arc</p>
+                            <span class="item__price">599 ₴</span>
+                            <button class="item__button">У кошик</button>
                         </div>
                     </article>
-                    <article>
-                        <img src="" alt="">
+
+                    <article class="products__cards-item">
+                        <img src="" alt="" class="item__img">
                         <div>
-                            <h3>Кепки</h3>
-                            <p>Кепка Fieldwork</p>
-                            <span>649 ₴</span>
-                            <button>У кошик</button>
+                            <h3 class="item__category">Кепки</h3>
+                            <p class="item__name">Кепка Fieldwork</p>
+                            <span class="item__price">649 ₴</span>
+                            <button class="item__button">У кошик</button>
                         </div>
                     </article>
-                    <article>
-                        <img src="" alt="">
+
+                    <article class="products__cards-item">
+                        <img src="" alt="" class="item__img">
                         <div></div>
                         <div>
-                            <h3>Кепки</h3>
-                            <p>Кепка Nightshade</p>
-                            <span>620 ₴</span>
-                            <button>Не має в наявності</button>
+                            <h3 class="item__category">Кепки</h3>
+                            <p class="item__name">Кепка Nightshade</p>
+                            <span class="item__price">620 ₴</span>
+                            <button class="item__button">Не має в наявності</button>
                         </div>
                     </article>
-                    <article>
-                        <img src="" alt="">
+
+                    <article class="products__cards-item">
+                        <img src="" alt="" class="item__img">
                         <div></div>
                         <div>
-                            <h3>Кепки</h3>
-                            <p>Кепка Sunline</p>
-                            <span>549 ₴</span>
-                            <button>У кошик</button>
+                            <h3 class="item__category">Кепки</h3>
+                            <p class="item__name">Кепка Sunline</p>
+                            <span class="item__price">549 ₴</span>
+                            <button class="item__button">У кошик</button>
                         </div>
                     </article>
-                    <article>
-                        <img src="" alt="">
+                    
+                    <article class="products__cards-item">
+                        <img src="" alt="" class="item__img">
                         <div>
-                            <h3>Футболки</h3>
-                            <p>Футболка Base Tee</p>
-                            <span>490 ₴</span>
-                            <button>У кошик</button>
+                            <h3 class="item__category">Футболки</h3>
+                            <p class="item__name">Футболка Base Tee</p>
+                            <span class="item__price">490 ₴</span>
+                            <button class="item__button">У кошик</button>
                         </div>
                     </article>
-                    <article>
-                        <img src="" alt="">
+
+                    <article class="products__cards-item">
+                        <img src="" alt="" class="item__img">
                         <div></div>
                         <div>
-                            <h3>Футболки</h3>
-                            <p>Футболка Blockprint</p>
-                            <span>590 ₴</span>
-                            <button>У кошик</button>
+                            <h3 class="item__category">Футболки</h3>
+                            <p class="item__name">Футболка Blockprint</p>
+                            <span class="item__price">590 ₴</span>
+                            <button class="item__button">У кошик</button>
                         </div>
                     </article>
-                    <article>
-                        <img src="" alt="">
+
+                    <article class="products__cards-item">
+                        <img src="" alt="" class="item__img">
                         <div></div>
                         <div>
-                            <h3>Футболки</h3>
-                            <p>Футболка Skyline</p>
-                            <span>540 ₴</span>
-                            <button>Не має в наявності</button>
+                            <h3 class="item__category">Футболки</h3>
+                            <p class="item__name">Футболка Skyline</p>
+                            <span class="item__price">540 ₴</span>
+                            <button class="item__button">Не має в наявності</button>
                         </div>
                     </article>
-                    <article>
-                        <img src="" alt="">
+
+                    <article class="products__cards-item">
+                        <img src="" alt="" class="item__img">
                         <div>
-                            <h3>Футболки</h3>
-                            <p>Футболка Mono Logo</p>
-                            <span>470 ₴</span>
-                            <button>У кошик</button>
+                            <h3 class="item__category">Футболки</h3>
+                            <p class="item__name">Футболка Mono Logo</p>
+                            <span class="item__price">470 ₴</span>
+                            <button class="item__button">У кошик</button>
                         </div>
                     </article>
                 </div>
             </div>
         </section>
         <section class="about">
-            <div>
+            <div class="container">
                 <div></div>
-                <div>
-                    <h3>Про магазин</h3>
-                    <p>KROK STREET — це простір для тих, хто формує власний стиль на стику спорту, музики та вуличного мистецтва. Ми відбираємо кросівки, худі та аксесуари, які легко комбінувати між собою і які витримують ритм справжнього міста.
+                <div class="about__text">
+                    <h3 class="about__text-title">Про магазин</h3>
+                    <p class="about__text-description">KROK STREET — це простір для тих, хто формує власний стиль на стику спорту, музики та вуличного мистецтва. Ми відбираємо кросівки, худі та аксесуари, які легко комбінувати між собою і які витримують ритм справжнього міста.
 
 Асортимент оновлюється щотижня, а розмірна сітка підходить під різні типи фігури — від XS до XL і від 40-го до 44-го.</p>
-                    <div>
-                        <div>
+                    <div class="about__analytics">
+                        <div class="about__analytics-item">
                             <h4>4</h4>
                             <p>категорії товарів</p>
                         </div>
-                        <div>
+
+                        <div class="about__analytics-item">
                             <h4>20+</h4>
                             <p>позицій каталозі</p>
                         </div>
-                        <div>
+
+                        <div class="about__analytics-item">
                             <h4>14</h4>
                             <p>позицій каталозі</p>
                         </div>
@@ -274,64 +292,65 @@
         </section>
         <section class="contacts">
             <div>
-                <div>
+                <div class="contacts__containers">
                     <h2>Контакти</h2>
                     <p>Є питання щодо розміру чи замовлення? Напиши нам — відповідаємо швидко.</p>
                     <div>
-                        <div>
+                        <div class="contacts__info">
                             <h4>Адреса</h4>
                             <p></p>
                         </div>
-                        <div>
+                        <div class="contacts__info">
                             <h4>Телефон</h4>
                             <p>+380 (67) 123-45-67</p>
                         </div>
-                        <div>
+                        <div class="contacts__info">
                             <h4>Пошта</h4>
                             <p>hello@krokstreet.ua</p>
                         </div>
-                        <div>
+                        <div class="contacts__info">
                             <h4>Графік</h4>
                             <p>Пн–Нд, 10:00–20:00</p>
                         </div>
                     </div>
-                    <div>
+                    <div class="contacts__socials">
                         <img src="" alt="IG">
                         <img src="" alt="TG">
                         <img src="" alt="TT">
                     </div>
                 </div>
-                <div></div>
+                <div class="contacts__picture"></div>
             </div>
         </section>
     </main>
+
     <footer>
-        <div>
-            <div>
-                <h2>krok street</h2>
+        <div class="container">
+            <div class="footer__info">
+                <h2 class="logo">krok street</h2>
                 <p>Вулична культура в кожній деталі.</p>
             </div>
-            <div>
+            <div class="footer__info">
                 <h2>Навігація</h2>
                 <p>Головна</p>
                 <p>Каталог</p>
                 <p>Про нас</p>
                 <p>Контакти</p>
             </div>
-            <div>
+            <div class="footer__info">
                 <h2>Категорії</h2>
                 <p>Кросівки</p>
                 <p>Худі</p>
                 <p>Кепки</p>
                 <p>Футболки</p>
             </div>
-            <div>
+            <div class="footer__info">
                 <h2>Контакти</h2>
                 <p>hello@krokstreet.ua</p>
                 <p>+380 (67) 123-45-67</p>
             </div>
         </div>
-        <div>
+        <div class="footer__copyrights">
             <p>© 2026 KROK STREET. Навчальний проєкт.</p>
         </div>
     </footer>
