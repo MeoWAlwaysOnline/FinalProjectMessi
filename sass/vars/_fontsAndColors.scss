@@ -1,0 +1,58 @@
+// colors
+$accent-color: #FF330E;
+$second-color: #FFFFFF;
+$bg-color: #131316;
+$text1-color: #B3B3B3;
+$text2-color: #A3A3AB;
+$text3-color: #5F5F61;
+$border-color: #2C2C31;
+$footer-color: #1A1A1E;
+
+// fonts
+@mixin fonts($type) {
+  @if $type == "title" {
+    font-family: "Roboto Condensed";
+  } @else if $type == "text2" {
+    font-family: "Montserrat";
+  } @else if $type == "text" {
+    font-family: "Inter";
+  }
+}
+
+@mixin logo-text {
+  font-family: Anton;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 36px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+}
+
+@mixin link-text {
+  font-family: Inter;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+@mixin input {
+  font-family: Inter;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+@mixin p-text {
+  font-family: Montserrat;
+  font-weight: 800;
+  font-style: ExtraBold;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+}
