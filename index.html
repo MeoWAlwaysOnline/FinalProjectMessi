@@ -91,16 +91,26 @@
                 <div class="filter__sort">
                     <div class="filter__sort-by">
                         <label>Сортування</label>
-                        <br>
+                    </div>
+                    <div class="filter__sort-instock">
                         <select>
                             <option>За замовчуванням</option>
                         </select>
+                        <div class="filter__sort-isInStock" style="display: flex;">
+                            <input type="checkbox" id="isInStock" class="isInStock2" style="display: none;">
+                                <div class="filter__sort-switcher" for="isInStock">
+                                    <label for="isInStock">
+                                        <div class="filter__sort-div-switcher">
+                                            <div class="filter__sort-div-circle">
+
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                            <label for="isInStock">Тільки в наявності</label>
+                        </div>
+                        <a type="reset" class="filter__sort-reset">Скинути фільтри</a>
                     </div>
-                    <div class="filter__sort-instock">
-                        <input type="checkbox" >
-                        <label>Тільки в наявності</label>
-                    </div>
-                    <button type="reset" class="filter__sort-reset">Скинути фільтри</button>
                 </div>
             </div>
         </section>
@@ -110,7 +120,7 @@
                 <span class="products__amount">xx товарів</span>
                 <div class="products__cards">
                     <article class="products__cards-item">
-                        <img src="" alt="" class="item__img">
+                        <img src="./src/images/Midnight_Court.jpg" alt="" class="item__img">
                         <div>
                             <h3 class="item__name">Кросівки</h3>
                             <p class="item_category">Кросівки Vortex Runner</p>
@@ -120,8 +130,8 @@
                     </article>
 
                     <article class="products__cards-item">
-                        <img src="" alt="" class="item__img">
-                        <div></div>
+                        <img src="./src/images/Midnight_Court.jpg" alt="" class="item__img">
+                        <!-- <div class="card__discount"></div> -->
                         <div>
                             <h3 class="item_category">Кросівки</h3>
                             <p class="item__name">Кросівки Midnight Court</p>
@@ -131,18 +141,18 @@
                     </article>
 
                     <article class="products__cards-item">
-                        <img src="" alt="" class="item__img">
-                        <div></div>
+                        <img src="./src/images/Lime_Pulse.jpg" alt="" class="item__img">
+                        <!-- <div></div> -->
                         <div>
                             <h3 class="item__category">Кросівки</h3>
                             <p class="item__name">Кросівки Lime Pulse</p>
                             <span class="item__price">2 199 ₴</span>
-                            <button class="item__button">Не має в наявності</button>
+                            <button class="item__button">Немає у наявності</button>
                         </div>
                     </article>
 
                     <article class="products__cards-item">
-                        <img src="" alt="" class="item__img">
+                        <img src="./src/images/Steel_Frame.jpg" alt="" class="item__img">
                         <div>
                             <h3 class="item_category">Кросівки</h3>
                             <p class="item__name">Кросівки Steel Frame</p>
@@ -152,8 +162,8 @@
                     </article>
 
                     <article class="products__cards-item">
-                        <img src="" alt="" class="item__img">
-                        <div></div>
+                        <img src="./src/images/Худі_Blockletter.jpg" alt="" class="item__img">
+                        <!-- <div></div> -->
                         <div>
                             <h3 class="item_category">Худі</h3>
                             <p class="item__name">Худі Blockletter</p>
@@ -163,8 +173,8 @@
                     </article>
 
                     <article class="products__cards-item">
-                        <img src="" alt="" class="item__img">
-                        <div></div>
+                        <img src="./src/images/Худі_Cloudwash.jpg" alt="" class="item__img">
+                        <!-- <div></div> -->
                         <div>
                             <h3 class="item_category">Худі</h3>
                             <p class="item__name">Худі Cloudwash</p>
@@ -174,7 +184,7 @@
                     </article>
 
                     <article class="products__cards-item">
-                        <img src="" alt="" class="item__img">
+                        <img src="./src/images/Худі_Night_Signal.jpg" alt="" class="item__img">
                         <div>
                             <h3 class="item_category">Худі</h3>
                             <p class="item__name">Худі Night Signal</p>
@@ -184,8 +194,8 @@
                     </article>
 
                     <article class="products__cards-item">
-                        <img src="" alt="" class="item__img">
-                        <div></div>
+                        <img src="./src/images/Худі_Concrete.jpg" alt="" class="item__img">
+                        <!-- <div></div> -->
                         <div>
                             <h3 class="item_category">Худі</h3>
                             <p class="item__name">Худі Concrete</p>
@@ -195,8 +205,8 @@
                     </article>
 
                     <article class="products__cards-item">
-                        <img src="" alt="" class="item__img">
-                        <div></div>
+                        <img src="./src/images/Кепка_Low_Arc.jpg" alt="" class="item__img">
+                        <!-- <div></div> -->
                         <div>
                             <h3 class="item_category">Кепки</h3>
                             <p class="item__name">Кепка Low Arc</p>
@@ -206,7 +216,7 @@
                     </article>
 
                     <article class="products__cards-item">
-                        <img src="" alt="" class="item__img">
+                        <img src="./src/images/Кепка_Fieldwork.jpg" alt="" class="item__img">
                         <div>
                             <h3 class="item__category">Кепки</h3>
                             <p class="item__name">Кепка Fieldwork</p>
@@ -216,8 +226,8 @@
                     </article>
 
                     <article class="products__cards-item">
-                        <img src="" alt="" class="item__img">
-                        <div></div>
+                        <img src="./src/images/Кепка_Nightshade.jpg" alt="" class="item__img">
+                        <!-- <div></div> -->
                         <div>
                             <h3 class="item__category">Кепки</h3>
                             <p class="item__name">Кепка Nightshade</p>
@@ -227,8 +237,8 @@
                     </article>
 
                     <article class="products__cards-item">
-                        <img src="" alt="" class="item__img">
-                        <div></div>
+                        <img src="./src/images/Кепка_Sunline.jpg" alt="" class="item__img">
+                        <!-- <div></div> -->
                         <div>
                             <h3 class="item__category">Кепки</h3>
                             <p class="item__name">Кепка Sunline</p>
@@ -238,7 +248,7 @@
                     </article>
                     
                     <article class="products__cards-item">
-                        <img src="" alt="" class="item__img">
+                        <img src="./src/images/Футболка_Base_Tee.jpg" alt="" class="item__img">
                         <div>
                             <h3 class="item__category">Футболки</h3>
                             <p class="item__name">Футболка Base Tee</p>
@@ -248,8 +258,8 @@
                     </article>
 
                     <article class="products__cards-item">
-                        <img src="" alt="" class="item__img">
-                        <div></div>
+                        <img src="./src/images/Футболка_Blockprint.jpg" alt="" class="item__img">
+                        <!-- <div></div> -->
                         <div>
                             <h3 class="item__category">Футболки</h3>
                             <p class="item__name">Футболка Blockprint</p>
@@ -259,8 +269,8 @@
                     </article>
 
                     <article class="products__cards-item">
-                        <img src="" alt="" class="item__img">
-                        <div></div>
+                        <img src="./src/images/Футболка_Skyline.jpg" alt="" class="item__img">
+                        <!-- <div></div> -->
                         <div>
                             <h3 class="item__category">Футболки</h3>
                             <p class="item__name">Футболка Skyline</p>
@@ -270,7 +280,7 @@
                     </article>
 
                     <article class="products__cards-item">
-                        <img src="" alt="" class="item__img">
+                        <img src="./src/images/Футболка_Mono_Logo.jpg" alt="" class="item__img">
                         <div>
                             <h3 class="item__category">Футболки</h3>
                             <p class="item__name">Футболка Mono Logo</p>
@@ -372,5 +382,7 @@
             <p>© 2026 KROK STREET. Навчальний проєкт.</p>
         </div>
     </footer>
+
+    <script src="./animations_etc.js"></script>
 </body>
 </html>
