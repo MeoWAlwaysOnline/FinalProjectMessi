@@ -1,12 +1,3 @@
-* {
-    box-sizing: border-box;
-}
-
-p, h1, h2, h3, h4, h5, h6, span, a, li {
-    margin: 0;
-    padding: 0;
-}
-
 .filter__sort {
     display: flex;
     background-color: #1E1E22;
@@ -20,9 +11,9 @@ p, h1, h2, h3, h4, h5, h6, span, a, li {
 }
 
 .filter__sort-reset {
-    height: 10px;
     color: #B3B3B3;
     text-decoration: underline;
+    cursor: pointer;
 }
 
 .filter__sort-instock {
@@ -30,8 +21,22 @@ p, h1, h2, h3, h4, h5, h6, span, a, li {
     gap: 25px;
 }
 
+.filter__sort-price {
+    background-color: #1A1A1E;
+    border: 1px solid #2C2C31;
+    color: #FFFFFF;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.filter__sort-allswitch {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 .filter__sort-switcher {
-    border: solid 1px #FFFFFF;
+    border: solid 2px #FFFFFF;
     border-radius: 30px;
     display: flex;
 }
@@ -56,7 +61,7 @@ p, h1, h2, h3, h4, h5, h6, span, a, li {
 .filter__sort-isInStock {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 25px;
 }
 
 // products
@@ -75,7 +80,7 @@ p, h1, h2, h3, h4, h5, h6, span, a, li {
     background-color: #1E1E22;
     color: #FFFFFF;
     border: solid 1px #2C2C31;
-    width: 50%;
+    width: 100%;
     border-radius: 20px;
     transition: 
     box-shadow 0.3s cubic-bezier(.17,.68,.26,.76),
@@ -136,9 +141,10 @@ p, h1, h2, h3, h4, h5, h6, span, a, li {
     padding: 15px 0px;
     border-radius: 10px;
     transition: 
-        color 0.3s ease-in-out,
-        border-color 0.3s ease-in-out,
-        box-shadow 0.3s ease-in-out
+        color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease
+    ;
 }
 
 .item__button:hover {
@@ -148,6 +154,49 @@ p, h1, h2, h3, h4, h5, h6, span, a, li {
     box-shadow: 0px 9px 50px 5px #ff320e8d;
 }
 
+
+
 .item__button:active {
     transform: scale(0.95);
+}
+
+// other shi
+
+.filter__title {
+    font-size: 48px;
+    font-weight: 400;
+    color: #FFFFFF;
+    padding-bottom: 10px;
+    padding-top: 175px;
+}
+
+.filter__subtitle {
+    font-size: 18px;
+    font-weight: 400;
+    color: #A3A3AB;
+    padding-bottom: 40px;
+}
+
+.filter__mains-item {
+    background-color: inherit;
+    border-radius: 20px;
+    border: solid 1px #2C2C31;
+    color: #A3A3AB;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 10px 25px;
+    transition:
+        color 0.25s ease,
+        background-color 0.25s ease
+    ;
+}
+
+.filter__mains-item:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+    cursor: pointer;
+}
+
+.filter__mains {
+    padding-bottom: 55px;
 }

@@ -62,12 +62,12 @@
         <section class="hero">
             <div class="container">
                 <div class="hero__text">
-                    <p class="suptitle">street style shop</p>
-                    <h2 class="title">вбрання для вулиць твого міста</h2>
-                    <p class="subtitle">Кросівки, худі, кепки й аксесуари, які носить твоя стрічка. Обирай образ і додавай у кошик за пару кліків.</p>
+                    <p class="hero__text-suptitle">street style shop</p>
+                    <h2 class="hero__text-title">вбрання для вулиць твого міста</h2>
+                    <p class="hero__text-subtitle">Кросівки, худі, кепки й аксесуари, які носить твоя стрічка. Обирай образ і додавай у кошик за пару кліків.</p>
                     <div class="hero__text-buttons">
-                        <button class="hero__buttons-view">Дивитись каталог</button>
-                        <button class="hero__buttons-about">Про магазин</button>
+                        <button class="hero__buttons-item hero__buttons-view">Дивитись каталог</button>
+                        <button class="hero__buttons-item">Про магазин</button>
                     </div>
                 </div>
 
@@ -80,8 +80,8 @@
         <section class="filter">
             <div class="container">
                 <h2 class="filter__title">Каталог</h2>
-                <p>Обирай категорію, фільтруй за ціною та розміром — знайди свій образ.</p>
-                <div class="filter__mains-buttons">
+                <p class="filter__subtitle">Обирай категорію, фільтруй за ціною та розміром — знайди свій образ.</p>
+                <div class="filter__mains">
                     <button class="filter__mains-item">Усе</button>
                     <button class="filter__mains-item">Кроссівки</button>
                     <button class="filter__mains-item">Худі</button>
@@ -93,23 +93,27 @@
                         <label>Сортування</label>
                     </div>
                     <div class="filter__sort-instock">
-                        <select>
+                        <select class="filter__sort-price">
                             <option>За замовчуванням</option>
+                            <option>Від найдешевшого</option>
+                            <option>Від найдорожчого</option>
                         </select>
-                        <div class="filter__sort-isInStock" style="display: flex;">
+                        <div class="filter__sort-isInStock">
+                            <div class="filter__sort-allswitch">
                             <input type="checkbox" id="isInStock" class="isInStock2" style="display: none;">
                                 <div class="filter__sort-switcher" for="isInStock">
                                     <label for="isInStock">
                                         <div class="filter__sort-div-switcher">
                                             <div class="filter__sort-div-circle">
-
                                             </div>
                                         </div>
                                     </label>
                                 </div>
                             <label for="isInStock">Тільки в наявності</label>
+                            </div>
+                            <a type="reset" class="filter__sort-reset">Скинути фільтри</a>
                         </div>
-                        <a type="reset" class="filter__sort-reset">Скинути фільтри</a>
+                        
                     </div>
                 </div>
             </div>

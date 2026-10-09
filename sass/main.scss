@@ -1,6 +1,9 @@
 @import "../sass/vars/mixins";
 @import "../sass/vars/fontsAndColors";
+@import "../sass/vars/reset.scss";
+@import "../sass/components/base";
 @import "../sass/components/header";
+@import "../sass/components/hero";
 @import "../sass/components/catalog";
 
 
