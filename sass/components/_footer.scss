@@ -1,0 +1,51 @@
+// тут взял из твоего header полностью
+footer h1 {
+    color: #FFFFFF;
+    min-width: 200px;
+    @include logo-text;
+
+    .logo_square {
+        color: #FF3D1A;
+    }
+}
+
+.footer__info p {
+    font-weight: 400;
+    font-size: 16px;
+    color: #B3B3B3;
+    cursor: pointer;
+}
+
+.footer__info-description {
+    cursor: default;
+}
+
+footer .container {
+    display: flex;
+    gap: 120px;
+    padding-top: 70px;
+    padding-bottom: 50px;
+}
+
+.footer__info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer__info h2 {
+    font-weight: 700;
+    font-size: 16px;
+    color: #5F5F61;
+}
+
+// copyrigjt
+
+.footer__copyrights {
+    height: 120px;
+    @include flex-center;
+    font-weight: 400;
+    font-size: 16px;
+    color: #5F5F61;
+    border-top: 2px solid #2C2C31;
+}

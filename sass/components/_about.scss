@@ -1,0 +1,35 @@
+.about__text-title {
+    font-weight: 400;
+    font-size: 85px;
+    line-height: 112px;
+    color: #FFFFFF;
+    padding-bottom: 10px;
+    padding-top: 160px;
+}
+
+.about__text-description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
+    max-width: 555px;
+    color: #B3B3B3;
+    padding-bottom: 70px;
+}
+
+.about__analytics {
+    display: flex;
+    gap: 30px;
+    padding-bottom: 190px;
+}
+
+.about__analytics-item h4 {
+    font-weight: 500;
+    font-size: 48px;
+    color: #ED3B1B;
+}
+
+.about__analytics-item p {
+    font-weight: 500;
+    font-size: 15px;
+    color: #B3B3B3;
+}
