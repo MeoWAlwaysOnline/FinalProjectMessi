@@ -9,3 +9,19 @@ getSwitcher.addEventListener("change", () => {
         getCircleSwitch.style.backgroundColor = "#FFFFFF"
     }
 });
+
+// modal
+let getModalBack = document.querySelector(".modal-back");
+let getModal = document.querySelector(".modal");
+let getButton = document.querySelector(".open__modal-test");
+let getClose = document.querySelector(".modal__close-icon");
+
+getButton.addEventListener("click", () => {
+    getModalBack.style.display = "flex";
+    getModal.style.display = "flex";
+})
+
+getClose.addEventListener("click", () => {
+    getModalBack.style.display = "none";
+    getModal.style.transform = "none"
+})
