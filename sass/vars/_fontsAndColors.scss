@@ -9,15 +9,6 @@ $border-color: #2C2C31;
 $footer-color: #1A1A1E;
 
 // fonts
-@mixin fonts($type) {
-  @if $type == "title" {
-    font-family: "Roboto Condensed";
-  } @else if $type == "text2" {
-    font-family: "Montserrat";
-  } @else if $type == "text" {
-    font-family: "Inter";
-  }
-}
 
 @mixin logo-text {
   font-family: Anton;
@@ -55,4 +46,44 @@ $footer-color: #1A1A1E;
   line-height: 100%;
   letter-spacing: 0%;
   text-transform: uppercase;
+}
+
+@mixin suptitle-p {
+    font-family: Onest;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 24px;
+    line-height: 123px;
+    letter-spacing: -2%;
+    text-transform: lowercase;
+}
+
+@mixin title-hero {
+    font-family: Onest;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 82px;
+    line-height: 112px;
+    letter-spacing: -2%;
+    text-transform: uppercase;
+}
+
+@mixin subtitle-p {
+    font-family: Inter;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: -2%;
+}
+
+@mixin button-view {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-style: SemiBold;
+  font-size: 20px;
+  line-height: 27px;
+  letter-spacing: -2%;
+  text-align: center;
+  vertical-align: middle;
 }

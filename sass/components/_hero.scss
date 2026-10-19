@@ -1,62 +1,61 @@
-.hero__text-suptitle {
-    font-size: 24px;
-    font-weight: 500;
-    color: #B3B3B3;
-    padding-bottom: 25px;
-    padding-top: 90px;
-}
+.hero {
+    height: 1000px;
+    width: 100%;
+    @include flex-center;
 
-.hero__text-title {
-    font-size: 82px;
-    font-weight: 500;
-    line-height: 112px;
-    color: #FFFFFF;
-    text-transform: uppercase;
-    max-width: 555px;
-    padding-bottom: 10px;
-}
+    .container {
+        width: 90%;
+        height: 950px;
+        @include flex-center;
+        justify-content: space-between;
 
-.hero__text-subtitle {
-    font-size: 18px;
-    font-weight: 500;
-    color: #B3B3B3;
-    max-width: 430px;
-    padding-bottom: 20px;
-}
+        .hero__text {
+            max-width: 535px;
+            height: 75%;
+            @include flex-center-flex;
+            justify-content: space-around;
+            align-items: flex-start;
 
-.hero__text-buttons {
-    display: flex;
-    gap: 30px;
-}
+            .hero__text-suptitle {
+                @include suptitle-p;
+                height: 70px;
+                color: #B3B3B3;
+            }
 
-.hero__buttons-item {
-    height: 70px;
-    background-color: inherit;
-    border: 1px solid #434343;
-    color: #FFFFFF;
-    border-radius: 5px;
-    padding: 0px 30px;
-    transition: 
-        color 0.3s ease,
-        box-shadow 0.3s ease,
-        border 0.3s ease,
-        transform 0.2s ease,
-    ;
-}
+            .hero__text-title {
+                @include title-hero;
+                color: #FFFFFF;
+            }
 
-.hero__buttons-view {
-    background-color: #FF3D1A;
-    color: #000000 !important;
-    border: none !important;
-}
+            .hero__text-subtitle {
+                @include subtitle-p;
+                max-width: 430px;
+                color: #B3B3B3;
+            }
 
-.hero__buttons-item:hover {
-    border: #FF330E solid 1px;
-    color: #FF330E;
-    cursor: pointer;
-    box-shadow: 0px 9px 50px 5px #ff320e8d;
-}
+            .hero__text-buttons {
+                display: flex;
+                gap: 20px;
 
-.hero__buttons-item:active {
-    transform: scale(0.9);
+                .hero__buttons-view, .hero__buttons-item {
+                    min-width: 250px;
+                    height: 70px;
+                    border-radius: 5px;
+                    @include button-view;
+                }
+
+                .hero__buttons-view {
+                    border: none;
+                    background-color: #FF3D1A;
+                    color: #131316;
+                }
+
+                .hero__buttons-item {
+                    background-color: #131316;
+                    border: 1px solid #434343;
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }
 }

@@ -19,14 +19,9 @@ let getClose = document.querySelector(".modal__close-icon");
 
 getButton.forEach(button =>{
     button.addEventListener("click", () => {
-    getModalBack.style.display = "flex";
-    getModal.style.display = "flex";
+        getModalBack.style.display = "flex";
+        getModal.style.display = "flex";
     });
-})
-
-getButton.addEventListener("click", () => {
-    getModalBack.style.display = "flex";
-    getModal.style.display = "flex";
 })
 
 getClose.addEventListener("click", () => {

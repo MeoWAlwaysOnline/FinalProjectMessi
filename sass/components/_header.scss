@@ -58,7 +58,7 @@ header {
     }
 
     .container {
-        width: 80%;
+        width: 90%;
         height: 120px;
         @include flex-center;
         justify-content: space-between;
@@ -121,7 +121,7 @@ header {
             }
 
             .search__items:hover > img {
-                transform: rotate(360deg);
+                transform: rotate(90deg);
             }
 
             .search__cart {
