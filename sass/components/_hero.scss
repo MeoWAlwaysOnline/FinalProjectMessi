@@ -1,27 +1,60 @@
 .hero {
-    height: 1450px;
+    height: 1000px;
     width: 100%;
     @include flex-center;
 
     .container {
-        width: 80%;
-        height: 1170px;
+        width: 90%;
+        height: 950px;
         @include flex-center;
         justify-content: space-between;
 
         .hero__text {
             max-width: 535px;
-            height: 60%;
+            height: 75%;
             @include flex-center-flex;
-            justify-content: space-between;
+            justify-content: space-around;
             align-items: flex-start;
 
             .hero__text-suptitle {
                 @include suptitle-p;
+                height: 70px;
+                color: #B3B3B3;
             }
 
             .hero__text-title {
                 @include title-hero;
+                color: #FFFFFF;
+            }
+
+            .hero__text-subtitle {
+                @include subtitle-p;
+                max-width: 430px;
+                color: #B3B3B3;
+            }
+
+            .hero__text-buttons {
+                display: flex;
+                gap: 20px;
+
+                .hero__buttons-view, .hero__buttons-item {
+                    min-width: 250px;
+                    height: 70px;
+                    border-radius: 5px;
+                    @include button-view;
+                }
+
+                .hero__buttons-view {
+                    border: none;
+                    background-color: #FF3D1A;
+                    color: #131316;
+                }
+
+                .hero__buttons-item {
+                    background-color: #131316;
+                    border: 1px solid #434343;
+                    color: #FFFFFF;
+                }
             }
         }
     }

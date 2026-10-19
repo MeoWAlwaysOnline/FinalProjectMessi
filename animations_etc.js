@@ -13,12 +13,14 @@ getSwitcher.addEventListener("change", () => {
 // modal
 let getModalBack = document.querySelector(".modal-back");
 let getModal = document.querySelector(".modal");
-let getButton = document.querySelector(".open__modal-test");
+let getButton = document.querySelectorAll(".open__modal-test");
 let getClose = document.querySelector(".modal__close-icon");
 
-getButton.addEventListener("click", () => {
-    getModalBack.style.display = "flex";
-    getModal.style.display = "flex";
+getButton.forEach(button =>{
+    button.addEventListener("click", () => {
+        getModalBack.style.display = "flex";
+        getModal.style.display = "flex";
+    });
 })
 
 getClose.addEventListener("click", () => {
