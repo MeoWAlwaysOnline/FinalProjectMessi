@@ -1,3 +1,4 @@
+// switcher
 let getSwitcher = document.querySelector(".isInStock2");
 let getCircleSwitch = document.querySelector(".filter__sort-div-circle");
 getSwitcher.addEventListener("change", () => {
@@ -13,8 +14,15 @@ getSwitcher.addEventListener("change", () => {
 // modal
 let getModalBack = document.querySelector(".modal-back");
 let getModal = document.querySelector(".modal");
-let getButton = document.querySelector(".open__modal-test");
+let getButton = document.querySelectorAll(".open__modal-test");
 let getClose = document.querySelector(".modal__close-icon");
+
+getButton.forEach(button =>{
+    button.addEventListener("click", () => {
+    getModalBack.style.display = "flex";
+    getModal.style.display = "flex";
+    });
+})
 
 getButton.addEventListener("click", () => {
     getModalBack.style.display = "flex";
