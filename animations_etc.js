@@ -1,3 +1,4 @@
+// switcher
 let getSwitcher = document.querySelector(".isInStock2");
 let getCircleSwitch = document.querySelector(".filter__sort-div-circle");
 getSwitcher.addEventListener("change", () => {

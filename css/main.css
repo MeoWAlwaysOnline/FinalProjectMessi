@@ -613,8 +613,7 @@ footer .container {
   align-items: center;
   z-index: 100;
 }
-
-.modal {
+.modal-back .modal {
   position: relative;
   display: none;
   width: 60%;
@@ -625,8 +624,7 @@ footer .container {
   z-index: 150;
   padding: 20px;
 }
-
-.modal__close-icon {
+.modal-back .modal .modal__close-icon {
   position: absolute;
   right: 20px;
   border: 1px solid #2C2C31;
@@ -638,10 +636,114 @@ footer .container {
      -moz-user-select: none;
           user-select: none;
 }
-
-.modal__close-icon:hover {
+.modal-back .modal .modal__close-icon:hover {
   border: 1px solid #FF330E;
   cursor: pointer;
+}
+.modal-back .modal .modal__content {
+  display: flex;
+}
+.modal-back .modal .modal__content .modal__text .modal__isInStock {
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  color: #FFEC3D;
+  margin-bottom: 30px;
+}
+.modal-back .modal .modal__content .modal__text .modal__text-suptitle {
+  margin-bottom: 15px;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  color: gray;
+}
+.modal-back .modal .modal__content .modal__text .modal__text-title {
+  margin-bottom: 15px;
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 100%;
+  color: #FFFFFF;
+  max-width: 320px;
+}
+.modal-back .modal .modal__content .modal__text .modal__text-price {
+  margin-bottom: 15px;
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 100%;
+  color: #FFFFFF;
+}
+.modal-back .modal .modal__content .modal__text .modal__text-subtitle {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: gray;
+  margin-bottom: 25px;
+  max-width: 320px;
+}
+.modal-back .modal .modal__content .modal__text .modal_chooseSize {
+  margin-bottom: 25px;
+}
+.modal-back .modal .modal__content .modal__text .modal_chooseSize p {
+  margin-bottom: 10px;
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  color: #5F5F61;
+}
+.modal-back .modal .modal__content .modal__text .modal_chooseSize button {
+  width: 45px;
+  height: 40px;
+  background-color: inherit;
+  border: 1px solid #2C2C31;
+  border-radius: 4px;
+  color: #FFFFFF;
+}
+.modal-back .modal .modal__content .modal__text .modal_chooseSize button:hover {
+  background-color: #FF3D1A;
+  color: #000000;
+  cursor: pointer;
+}
+.modal-back .modal .modal__content .modal__text .modal_chooseQuantity {
+  display: flex;
+  flex-direction: column;
+}
+.modal-back .modal .modal__content .modal__text .modal_chooseQuantity p {
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  color: #5F5F61;
+}
+.modal-back .modal .modal__content .modal__text .modal_chooseQuantity .modal_chooseQuantity-div {
+  display: flex;
+  border: 1px solid #2C2C31;
+  gap: 20px;
+  box-sizing: border-box;
+  padding: 5px 7px 5px 7px;
+  width: -moz-max-content;
+  width: max-content;
+  border-radius: 5px;
+  color: #FFFFFF;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+.modal-back .modal .modal__content .modal__text .modal_chooseQuantity .modal_chooseQuantity-div .modal_chooseQuantity-plus, .modal-back .modal .modal__content .modal__text .modal_chooseQuantity .modal_chooseQuantity-div .modal_chooseQuantity-minus {
+  border: none;
+  background-color: inherit;
+  font-weight: 700;
+  color: #FFFFFF;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.modal-back .modal .modal__content .modal__text .modal_chooseQuantity .modal_chooseQuantity-div .modal_chooseQuantity-plus:active, .modal-back .modal .modal__content .modal__text .modal_chooseQuantity .modal_chooseQuantity-div .modal_chooseQuantity-minus:active {
+  background-color: rgba(255, 255, 255, 0.2470588235);
 }
 
 body {
