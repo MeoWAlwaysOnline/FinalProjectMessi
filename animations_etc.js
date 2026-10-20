@@ -28,3 +28,24 @@ getClose.addEventListener("click", () => {
     getModalBack.style.display = "none";
     getModal.style.transform = "none"
 })
+
+// add and subtract
+let getPlusButton = document.querySelector(".modal_chooseQuantity-plus");
+let getMinusButton = document.querySelector(".modal_chooseQuantity-minus");
+let getCounter = document.querySelector(".modal__chooseQuantity-counter");
+let CounterValue = 1;
+getCounter.textContent = CounterValue;
+
+getPlusButton.addEventListener("click", () => {
+    if (CounterValue !== 10) {
+        CounterValue = CounterValue + 1;
+    }
+    getCounter.textContent = CounterValue;
+})
+
+getMinusButton.addEventListener("click", () => {
+    if (CounterValue > 0) {
+        CounterValue = CounterValue - 1;
+    }
+    getCounter.textContent = CounterValue;
+})
