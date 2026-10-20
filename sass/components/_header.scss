@@ -11,19 +11,19 @@ header {
         width: 100%;
         padding: 0 30px;
         height: 46px;
-        margin-top: -10px;
         overflow: hidden;
         white-space: nowrap;
 
 
         div {
             width: 100%;
-            display: flex;
+            @include flex-center;
             white-space: nowrap;
             animation: scrollText 15s linear infinite alternate; 
         }
 
         p {
+            height: 100%;
             color: #131316;
             margin-right: 50px;
             @include p-text;
@@ -58,7 +58,7 @@ header {
     }
 
     .container {
-        width: 90%;
+        width: 85%;
         height: 120px;
         @include flex-center;
         justify-content: space-between;
