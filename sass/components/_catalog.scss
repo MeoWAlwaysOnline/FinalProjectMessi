@@ -1,104 +1,110 @@
 .filter {
+    width: 100%;
+    @include flex-center;
 
-    .filter__title {
-        font-size: 48px;
-        font-weight: 400;
-        color: #FFFFFF;
-        padding-bottom: 10px;
-        padding-top: 175px;
-    }
+    .container {
+        width: 90%;
 
-    .filter__subtitle {
-        font-size: 18px;
-        font-weight: 400;
-        color: #A3A3AB;
-        padding-bottom: 40px;
-    }
+        .filter__title {
+            font-size: 48px;
+            font-weight: 400;
+            color: #FFFFFF;
+            padding-bottom: 10px;
+            padding-top: 175px;
+        }
 
-    .filter__mains {
-        padding-bottom: 55px;
-
-        .filter__mains-item {
-            background-color: inherit;
-            border-radius: 20px;
-            border: solid 1px #2C2C31;
-            color: #A3A3AB;
-            font-weight: 600;
+        .filter__subtitle {
             font-size: 18px;
-            padding: 10px 25px;
-            transition:
-                color 0.25s ease,
-                background-color 0.25s ease
-            ;
+            font-weight: 400;
+            color: #A3A3AB;
+            padding-bottom: 40px;
+        }
 
-            &:hover {
-                background-color: #FFFFFF;
-                color: #000000;
-                cursor: pointer;
+        .filter__mains {
+            padding-bottom: 55px;
+
+            .filter__mains-item {
+                background-color: inherit;
+                border-radius: 20px;
+                border: solid 1px #2C2C31;
+                color: #A3A3AB;
+                font-weight: 600;
+                font-size: 18px;
+                padding: 10px 25px;
+                transition:
+                    color 0.25s ease,
+                    background-color 0.25s ease
+                ;
+
+                &:hover {
+                    background-color: #FFFFFF;
+                    color: #000000;
+                    cursor: pointer;
+                }
             }
         }
-    }
 
 
-    .filter__sort {
-        display: flex;
-        background-color: #1E1E22;
-        border: #2C2C31 1px solid;
-        border-radius: 20px;
-        color: #A3A3AB;
-        padding: 20px;
-        flex-direction: column;
-        justify-content: center;
-        gap: 25px;
-
-        .filter__sort-instock {
+        .filter__sort {
             display: flex;
+            background-color: #1E1E22;
+            border: #2C2C31 1px solid;
+            border-radius: 20px;
+            color: #A3A3AB;
+            padding: 20px;
+            flex-direction: column;
+            justify-content: center;
             gap: 25px;
 
-            .filter__sort-reset {
-                color: #B3B3B3;
-                text-decoration: underline;
-                cursor: pointer;
-            }
-
-            .filter__sort-isInStock {
+            .filter__sort-instock {
                 display: flex;
-                align-items: center;
                 gap: 25px;
 
-                .filter__sort-allswitch {
+                .filter__sort-reset {
+                    color: #B3B3B3;
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+
+                .filter__sort-isInStock {
                     display: flex;
                     align-items: center;
-                    gap: 10px;
+                    gap: 25px;
 
-                    .filter__sort-switcher {
-                        border: solid 2px #FFFFFF;
-                        border-radius: 30px;
+                    .filter__sort-allswitch {
                         display: flex;
+                        align-items: center;
+                        gap: 10px;
 
-                        .filter__sort-div-switcher {
-                            width: 50px;
-                            height: 25px;
-                            cursor: pointer;
+                        .filter__sort-switcher {
+                            border: solid 2px #FFFFFF;
+                            border-radius: 30px;
+                            display: flex;
 
-                            .filter__sort-div-circle {
-                                width: 25px;
+                            .filter__sort-div-switcher {
+                                width: 50px;
                                 height: 25px;
-                                background-color: #FFFFFF;
-                                border-radius: 100px;
-                                transition: transform 0.25s ease, background-color 0.3s ease;
+                                cursor: pointer;
+
+                                .filter__sort-div-circle {
+                                    width: 25px;
+                                    height: 25px;
+                                    background-color: #FFFFFF;
+                                    border-radius: 100px;
+                                    transition: transform 0.25s ease, background-color 0.3s ease;
+                                }
                             }
                         }
                     }
                 }
-            }
 
-            .filter__sort-price {
-                background-color: #1A1A1E;
-                border: 1px solid #2C2C31;
-                color: #FFFFFF;
-                padding: 10px;
-                border-radius: 5px;
+                .filter__sort-price {
+                    background-color: #1A1A1E;
+                    border: 1px solid #2C2C31;
+                    color: #FFFFFF;
+                    padding: 10px;
+                    border-radius: 5px;
+                }
             }
         }
     }

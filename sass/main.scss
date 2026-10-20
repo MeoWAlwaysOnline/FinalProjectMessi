@@ -11,6 +11,12 @@
 @import "../sass/components/footer";
 @import "../sass/components/modal";
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #131316;
+    margin: 0;
+    padding: 0;
 }

@@ -87,3 +87,12 @@ $footer-color: #1A1A1E;
   text-align: center;
   vertical-align: middle;
 }
+
+@mixin product-amount {
+  font-family: Inter;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}

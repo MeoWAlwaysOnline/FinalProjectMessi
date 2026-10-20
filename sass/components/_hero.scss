@@ -1,17 +1,17 @@
 .hero {
-    height: 1000px;
+    height: 800px;
     width: 100%;
     @include flex-center;
 
     .container {
         width: 90%;
-        height: 950px;
+        height: 750px;
         @include flex-center;
         justify-content: space-between;
 
         .hero__text {
             max-width: 535px;
-            height: 75%;
+            height: 95%;
             @include flex-center-flex;
             justify-content: space-around;
             align-items: flex-start;
