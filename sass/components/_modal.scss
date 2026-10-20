@@ -15,7 +15,7 @@
         position: relative;
         display: none;
         width: 60%;
-        height: 500px;
+        min-height: 500px;
         background-color: #1E1E22;
         border: 3px solid #2C2C31;
         border-radius: 20px;
@@ -24,7 +24,8 @@
 
         .modal__close-icon {
             position: absolute;
-            right: 20px;
+            right: 10px;
+            top: 10px;
             border: 1px solid #2C2C31;
             padding: 6px;
             border-radius: 100px;
@@ -40,123 +41,142 @@
 
         .modal__content{
             display: flex;
+            gap: 30px;
 
-            .modal__text {
+            img {
+                border-radius: 20px;
+                max-width: 500px;
+                max-height: 545px;
+            }
 
-                .modal__isInStock {
+        .modal__text {
+            .modal__isInStock {
+                font-family: "Inter";
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 100%;
+                color: #FFEC3D;
+                margin-bottom: 30px;
+            }
+
+            .modal__addToCart{
+                padding: 15px 105px;
+                background-color: #FF3D1A;
+                font-family: "Inter";
+                font-weight: 600;
+                font-size: 16px;
+                border: none;
+                cursor: pointer;
+                transition: 
+                    transform 0.1s ease,
+                    box-shadow 0.3s ease;
+
+                &:hover {
+                    
+                    box-shadow: 0px 9px 50px 5px #ff320e8d;
+                }
+            
+                &:active {
+                    transform: scale(0.95);
+                }
+            }
+
+                .modal__text-suptitle {
+                    margin-bottom: 15px;
                     font-family: "Inter";
-                    font-weight: 600;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 100%;
+                    color: gray;
+                }
+                .modal__text-title {
+                    margin-bottom: 15px;
+                    font-family: "Inter";
+                    font-weight: 700;
+                    font-size: 32px;
+                    line-height: 100%;
+                    color: #FFFFFF;
+                    max-width: 320px;
+                }
+                .modal__text-price {
+                    margin-bottom: 15px;
+                    font-family: "Inter";
+                    font-weight: 700;
+                    font-size: 28px;
+                    line-height: 100%;
+                    color: #FFFFFF;
+                }
+                .modal__text-subtitle {
+                    font-family: "Inter";
+                    font-weight: 400;
                     font-size: 16px;
                     line-height: 100%;
-                    color: #FFEC3D;
-                    margin-bottom: 30px;
+                    letter-spacing: 0%;
+                    color: gray;
+                    margin-bottom: 25px;
+                    max-width: 320px;
                 }
-
-                    .modal__text-suptitle {
-                        margin-bottom: 15px;
-                        font-family: "Inter";
-                        font-weight: 400;
-                        font-size: 14px;
-                        line-height: 100%;
-                        color: gray;
-                    }
-
-                    .modal__text-title {
-                        margin-bottom: 15px;
-                        font-family: "Inter";
-                        font-weight: 700;
-                        font-size: 32px;
-                        line-height: 100%;
-                        color: #FFFFFF;
-                        max-width: 320px;
-                    }
-
-                    .modal__text-price {
-                        margin-bottom: 15px;
-                        font-family: "Inter";
-                        font-weight: 700;
-                        font-size: 28px;
-                        line-height: 100%;
-                        color: #FFFFFF;
-                    }
-
-                    .modal__text-subtitle {
-                        font-family: "Inter";
-                        font-weight: 400;
-                        font-size: 16px;
-                        line-height: 100%;
-                        letter-spacing: 0%;
-                        color: gray;
-                        margin-bottom: 25px;
-                        max-width: 320px;
-                    }
-
-                    .modal_chooseSize {
-                        margin-bottom: 25px;
-                            p {
-                                margin-bottom: 10px;
-                                font-family: "Inter";
-                                font-weight: 600;
-                                font-size: 16px;
-                                line-height: 100%;
-                                color: #5F5F61;
-                            }
-
-                            button {
-                                width: 45px;
-                                height: 40px;
-                                background-color: inherit;
-                                border: 1px solid #2C2C31;
-                                border-radius: 4px;
-                                color: #FFFFFF;
-                            }
-
-                            button:hover {
-                                background-color: #FF3D1A;
-                                color: #000000;
-                                cursor: pointer;
-                            }
-                    }
-
-                    .modal_chooseQuantity {
-                        display: flex;
-                        flex-direction: column;
-
+                .modal_chooseSize {
+                    margin-bottom: 25px;
                         p {
+                            margin-bottom: 10px;
                             font-family: "Inter";
                             font-weight: 600;
                             font-size: 16px;
                             line-height: 100%;
                             color: #5F5F61;
                         }
-
-                        .modal_chooseQuantity-div {
-                            display: flex;
+                        button {
+                            width: 45px;
+                            height: 40px;
+                            background-color: inherit;
                             border: 1px solid #2C2C31;
-                            gap: 20px;
-                            box-sizing: border-box;
-                            padding: 5px 7px 5px 7px;
-                            width: max-content;
-                            border-radius: 5px;
+                            border-radius: 4px;
                             color: #FFFFFF;
-                            margin-top: 10px;
-                            margin-bottom: 25px;
-
-                            .modal_chooseQuantity-plus, .modal_chooseQuantity-minus {
-                                border: none;
-                                background-color: inherit;
-                                font-weight: 700;
-                                color: #FFFFFF;
-                                cursor: pointer;
-                                border-radius: 3px;
-                            }
-
-                            .modal_chooseQuantity-plus:active, .modal_chooseQuantity-minus:active {
-                                background-color: #ffffff3f;
-                            }
+                        }
+                        button:hover {
+                            background-color: #FF3D1A;
+                            color: #000000;
+                            cursor: pointer;
+                        }
+                }
+                .modal_chooseQuantity {
+                    display: flex;
+                    flex-direction: column;
+                    p {
+                        font-family: "Inter";
+                        font-weight: 600;
+                        font-size: 16px;
+                        line-height: 100%;
+                        color: #5F5F61;
+                    }
+                    .modal_chooseQuantity-div {
+                        display: flex;
+                        border: 1px solid #2C2C31;
+                        gap: 20px;
+                        box-sizing: border-box;
+                        width: max-content;
+                        border-radius: 5px;
+                        color: #FFFFFF;
+                        margin-top: 10px;
+                        margin-bottom: 25px;
+                        @include flex-center;
+                        .modal_chooseQuantity-plus, .modal_chooseQuantity-minus {
+                            border: none;
+                            background-color: inherit;
+                            font-weight: 700;
+                            color: #FFFFFF;
+                            cursor: pointer;
+                            border-radius: 3px;
+                            width: 30px;
+                            height: 30px;
+                        }
+                        .modal_chooseQuantity-plus:active, .modal_chooseQuantity-minus:active {
+                            background-color: #ffffff3f;
                         }
                     }
                 }
+            }
         }
     }
 }
