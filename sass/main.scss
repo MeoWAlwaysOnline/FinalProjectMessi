@@ -1,7 +1,6 @@
 @import "../sass/vars/mixins";
 @import "../sass/vars/fontsAndColors";
 @import "../sass/vars/reset.scss";
-@import "../sass/components/base";
 @import "../sass/components/header";
 @import "../sass/components/hero";
 @import "../sass/components/catalog";
@@ -10,12 +9,14 @@
 @import "../sass/components/contacts";
 @import "../sass/components/footer";
 @import "../sass/components/modal";
+@import "../sass/components/cart";
 
 html {
     scroll-behavior: smooth;
 }
 
 body {
+    position: relative;
     background-color: #131316;
     margin: 0;
     padding: 0;

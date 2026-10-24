@@ -96,3 +96,13 @@ $footer-color: #1A1A1E;
   line-height: 100%;
   letter-spacing: 0%;
 }
+
+@mixin about-span-font {
+  font-family: Onest;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 20px;
+  line-height: 27px;
+  letter-spacing: -2%;
+  text-transform: lowercase;
+}

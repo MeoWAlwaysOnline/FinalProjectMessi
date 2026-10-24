@@ -47,13 +47,22 @@
                 .hero__buttons-view {
                     border: none;
                     background-color: #FF3D1A;
-                    color: #131316;
+
+                    a {
+                        text-decoration: none;
+                        color: #131316;
+                    }
                 }
 
                 .hero__buttons-item {
                     background-color: #131316;
                     border: 1px solid #434343;
-                    color: #FFFFFF;
+                    
+
+                    a {
+                        text-decoration: none;
+                        color: #FFFFFF;
+                    }
                 }
             }
         }

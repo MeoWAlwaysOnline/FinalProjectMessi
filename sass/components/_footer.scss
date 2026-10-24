@@ -1,51 +1,90 @@
-// тут взял из твоего header полностью
-footer h1 {
+footer {
     color: #FFFFFF;
-    min-width: 200px;
-    @include logo-text;
+    background-color: #18181B;
 
-    .logo_square {
-        color: #FF3D1A;
+    h1 {
+        min-width: 200px;
+        @include logo-text;
+
+        .logo_square {
+            color: #FF3D1A;
+        }
     }
-}
 
-.footer__info p {
-    font-weight: 400;
-    font-size: 16px;
-    color: #B3B3B3;
-    cursor: pointer;
-}
-
-.footer__info-description {
-    cursor: default;
-}
-
-footer .container {
-    display: flex;
-    gap: 120px;
-    padding-top: 70px;
-    padding-bottom: 50px;
+    .container {
+        @include flex-center;
+        align-items: start;
+        width: 100%;
+        gap: 120px;
+        padding: 50px 0px 50px 0px;
+    }
 }
 
 .footer__info {
     display: flex;
     flex-direction: column;
     gap: 20px;
-}
 
-.footer__info h2 {
-    font-weight: 700;
-    font-size: 16px;
-    color: #5F5F61;
-}
+    h2 {
+        font-size: 16px;
+        font-weight: 700;
+        color: #5F5F61;
+    }
 
-// copyrigjt
+    p {
+        font-size: 16px;
+        font-weight: 400;
+        color: #B3B3B3;
+        cursor: pointer;
+        transition: color 0.2s ease;
+
+        &:hover {
+            color: #FFFFFF;
+        }
+    }
+
+    .footer__info-description {
+        cursor: default;
+
+        &:hover {
+            color: #B3B3B3;
+        }
+    }
+}
 
 .footer__copyrights {
-    height: 120px;
     @include flex-center;
-    font-weight: 400;
-    font-size: 16px;
-    color: #5F5F61;
+    min-height: 60px;
+    padding: 20px;
     border-top: 2px solid #2C2C31;
+    font-size: 16px;
+    font-weight: 400;
+    color: #5F5F61;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    footer {
+        .container {
+            flex-wrap: wrap;
+            gap: 40px 60px;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    footer {
+        .container {
+            flex-direction: column;
+            gap: 35px;
+        }
+    }
+
+    .footer__info {
+        gap: 15px;
+    }
+
+    .footer__copyrights {
+        min-height: 90px;
+    }
 }

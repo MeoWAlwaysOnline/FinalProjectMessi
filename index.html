@@ -38,10 +38,10 @@
                 <h1 class="logo">krok  <span class="logo_square">▪</span>  street</h1>
                 <nav>
                     <ul>
-                        <li><a href="#">Головна</a></li>
-                        <li><a href="#">Каталог</a></li>
-                        <li><a href="#">Про нас</a></li>
-                        <li><a href="#">Контакти</a></li>
+                        <li><a href="#main">Головна</a></li>
+                        <li><a href="#products">Каталог</a></li>
+                        <li><a href="#about">Про нас</a></li>
+                        <li><a href="#contacts">Контакти</a></li>
                     </ul>
                 </nav>
             </div>
@@ -55,23 +55,44 @@
                 <div class="search__cart">
                     <img src="/src/images/cart.png" alt="cart logo">
                 </div>
+                <div class="cart">
+                    <div class="cart__header">
+                        <h2>Кошик [0]</h2>
+                        <button class="cart__close">×</button>
+                    </div>
+
+                    <div class="cart__empty">
+                        <svg width="28" height="28" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="9" cy="21" r="1"/>
+                            <circle cx="20" cy="21" r="1"/>
+                            <path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/>
+                        </svg>
+
+                        <p>Кошик поки порожній</p>
+
+                        <a href="#products" class="cart__button">
+                            Дивитись каталог
+                        </a>
+                    </div>
+                </div>
             </div>
 
         </div>
     </header>
     <main>
-        <section class="hero">
+        <section class="hero" id="main">
             <div class="container">
                 <div class="hero__text">
                     <p class="hero__text-suptitle">street style shop</p>
                     <h2 class="hero__text-title">вбрання для вулиць твого міста</h2>
                     <p class="hero__text-subtitle">Кросівки, худі, кепки й аксесуари, які носить твоя стрічка. Обирай образ і додавай у кошик за пару кліків.</p>
                     <div class="hero__text-buttons">
-                        <button class="hero__buttons-view">Дивитись каталог</button>
-                        <button class="hero__buttons-item">Про магазин</button>
+                        <button class="hero__buttons-view"><a href="#products">Дивитись каталог</a></button>
+                        <button class="hero__buttons-item"><a href="#about">Про магазин</a></button>
                     </div>
                 </div>
-
+s
                 <div class="hero__imgs">
                     <img src="#" alt="img of shoes">
                     <img src="#" alt="img of cap">
@@ -119,7 +140,7 @@
                 </div>
             </div>
         </section>
-        <section class="products">
+        <section class="products" id="products">
             <span class="products__amount">xx товарів</span>
             <div class="container">
                 <div class="products__cards">
@@ -295,9 +316,14 @@
                 </div>
             </div>
         </section>
-        <section class="about" style="background-color: #1A1A1E;">
+        <section class="about" id="about" style="background-color: #1A1A1E;">
             <div class="container">
-                <div></div>
+                <div class="about__picture">
+                    <img src="src/images/aboutJacket.png" alt="">
+                    <div>
+                        <span>Обирай свій стиль</span>
+                    </div>
+                </div>
                 <div class="about__text">
                     <h3 class="about__text-title">Про магазин</h3>
                     <p class="about__text-description">KROK STREET — це простір для тих, хто формує власний стиль на стику спорту, музики та вуличного мистецтва. Ми відбираємо кросівки, худі та аксесуари, які легко комбінувати між собою і які витримують ритм справжнього міста. <br> <br> Асортимент оновлюється щотижня, а розмірна сітка підходить під різні типи фігури — від XS до XL і від 40-го до 44-го.</p>
@@ -320,7 +346,7 @@
                 </div>
             </div>
         </section>
-        <section class="contacts">
+        <section class="contacts" id="contacts">
             <div class="container">
                 <div class="contacts__containers">
                     <h2>Контакти</h2>
@@ -349,7 +375,9 @@
                         <a href="https://www.tiktok.com/" target="_blank"><img src="./src/svgs/tiktok.png" alt="TT"></a>
                     </div>  
                 </div>
-                <div class="contacts__picture"></div>
+                <div class="contacts__picture">
+                    <img src="src/images/contactsBag.png" alt="">
+                </div>
             </div>
         </section>
     </main>
@@ -425,5 +453,6 @@
     </div>
 
     <script src="./animations_etc.js"></script>
+    <script src="./cart.js"></script>
 </body>
 </html>
