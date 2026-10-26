@@ -48,12 +48,12 @@
 
             <div class="search">
                 <form class="search__items">
-                    <img src="/src/images/search.png" alt="search logo">
+                    <img src="./src/images/search.png" alt="search logo">
                     <input type="text" placeholder="Пошук товарів..."> 
                 </form>
 
                 <div class="search__cart">
-                    <img src="/src/images/cart.png" alt="cart logo">
+                    <img src="./src/images/cart.png" alt="cart logo">
                 </div>
                 <div class="cart">
                     <div class="cart__header">
@@ -148,7 +148,7 @@
                         <div>
                             <h3 class="item__category">Кросівки</h3>
                             <p class="item__name">Кросівки Vortex Runner</p>
-                            <span class="item__price">2 399 ₴</span>
+                            <span class="item__price">2399 ₴</span> <!--data price-->
                             <button class="item__button">У кошик</button>
                         </div>
                     </article>
@@ -158,7 +158,7 @@
                         <div>
                             <h3 class="item__category">Кросівки</h3>
                             <p class="item__name">Кросівки Midnight Court</p>
-                            <span class="item__price">1 899 ₴</span>
+                            <span class="item__price">1899 ₴</span>
                             <button class="item__button">У кошик</button>
                         </div>
                     </article>
@@ -168,7 +168,7 @@
                         <div>
                             <h3 class="item__category">Кросівки</h3>
                             <p class="item__name">Кросівки Lime Pulse</p>
-                            <span class="item__price">2 199 ₴</span>
+                            <span class="item__price">2199 ₴</span>
                             <button class="item__button">Немає у наявності</button>
                         </div>
                     </article>
@@ -178,7 +178,7 @@
                         <div>
                             <h3 class="item__category">Кросівки</h3>
                             <p class="item__name">Кросівки Steel Frame</p>
-                            <span class="item__price">2 650 ₴ </span>
+                            <span class="item__price">2650 ₴ </span>
                             <button class="item__button">У кошик</button>
                         </div>
                     </article>
@@ -188,7 +188,7 @@
                         <div>
                             <h3 class="item__category">Худі</h3>
                             <p class="item__name">Худі Blockletter</p>
-                            <span class="item__price">1 450 ₴</span>
+                            <span class="item__price">1450 ₴</span>
                             <button class="item__button">У кошик</button>
                         </div>
                     </article>
@@ -198,7 +198,7 @@
                         <div>
                             <h3 class="item__category">Худі</h3>
                             <p class="item__name">Худі Cloudwash</p>
-                            <span class="item__price">1 590 ₴</span>
+                            <span class="item__price">1590 ₴</span>
                             <button class="item__button">У кошик</button>
                         </div>
                     </article>
@@ -208,7 +208,7 @@
                         <div>
                             <h3 class="item__category">Худі</h3>
                             <p class="item__name">Худі Night Signal</p>
-                            <span class="item__price">1 690 ₴</span>
+                            <span class="item__price">1690 ₴</span>
                             <button class="item__button">Не має в наявності</button>
                         </div>
                     </article>
@@ -218,7 +218,7 @@
                         <div>
                             <h3 class="item__category">Худі</h3>
                             <p class="item__name">Худі Concrete</p>
-                            <span class="item__price">1 380 ₴</span>
+                            <span class="item__price">1380 ₴</span>
                             <button class="item__button">У кошик</button>
                         </div>
                     </article>
@@ -379,17 +379,17 @@
             </div>
             <div class="footer__info">
                 <h2>Навігація</h2>
-                <p>Головна</p>
-                <p>Каталог</p>
-                <p>Про нас</p>
-                <p>Контакти</p>
+                <a href="#main"><p>Головна</p></a>
+                <a href="#products"><p>Каталог</p></a>
+                <a href="#about"><p>Про нас</p></a>
+                <a href="#contacts"><p>Контакти</p></a>
             </div>
             <div class="footer__info">
                 <h2>Категорії</h2>
-                <p>Кросівки</p>
-                <p>Худі</p>
-                <p>Кепки</p>
-                <p>Футболки</p>
+                <a href="#"><p>Кросівки</p></a>
+                <a href="#"><p>Худі</p></a>
+                <a href="#"><p>Кепки</p></a>
+                <a href="#"><p>Футболки</p></a>
             </div>
             <div class="footer__info">
                 <h2>Контакти</h2>
@@ -414,7 +414,7 @@
                 <div class="modal__text">
                     <p class="modal__text-suptitle">URBN · Кросівки</p>
                     <h3 class="modal__text-title">Кросівки Vortex Runner</h3>
-                    <h4 class="modal__text-price">2 399 ₴</h4>
+                    <h4 class="modal__text-price">2399 ₴</h4>
                     <p class="modal__text-subtitle">Легкі бігові кросівки з рельєфною підошвою — тримають зчеплення на будь-якому асфальті.</p>
 
                         <div class="modal_chooseSize">
@@ -429,9 +429,9 @@
                         <div class="modal_chooseQuantity">
                             <p>Кількість</p>
                             <div class="modal_chooseQuantity-div">
-                                <button class="modal_chooseQuantity-plus">+</button>
-                                <p class="modal__chooseQuantity-counter">1</p>
                                 <button class="modal_chooseQuantity-minus">-</button>
+                                <p class="modal__chooseQuantity-counter">1</p>
+                                <button class="modal_chooseQuantity-plus">+</button>
                             </div>
                         </div>
                     <p class="modal__isInStock">Є в наявності</p>

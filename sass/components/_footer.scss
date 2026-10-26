@@ -34,6 +34,7 @@ footer {
     p {
         font-size: 16px;
         font-weight: 400;
+        font-family: "Inter";
         color: #B3B3B3;
         cursor: pointer;
         transition: color 0.2s ease;
@@ -55,12 +56,12 @@ footer {
 .footer__copyrights {
     @include flex-center;
     min-height: 60px;
-    padding: 20px;
     border-top: 2px solid #2C2C31;
     font-size: 16px;
     font-weight: 400;
     color: #5F5F61;
     text-align: center;
+    font-family: "Inter";
 }
 
 @media (max-width: 900px) {

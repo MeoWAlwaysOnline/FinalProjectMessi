@@ -14,109 +14,85 @@ if (getSwitcher && getCircleSwitch) {
 
 let modalBack = document.querySelector(".modal-back");
 let modal = document.querySelector(".modal");
-let cards = document.querySelectorAll('.products__cards-item');
-let closeIcon = document.querySelector('.modal__close-icon');
+let cards = document.querySelectorAll(".products__cards-item");
+let closeIcon = document.querySelector(".modal__close-icon");
+
+let modalTitle = modalBack.querySelector(".modal__text-title");
+let modalPrice = modalBack.querySelector(".modal__text-price");
+let modalImg = modalBack.querySelector(".modal__content > img");
+let modalSuptitle = modalBack.querySelector(".modal__text-suptitle");
+
+let getPlusButton = document.querySelector(".modal_chooseQuantity-plus");
+let getMinusButton = document.querySelector(".modal_chooseQuantity-minus");
+let getCounter = document.querySelector(".modal__chooseQuantity-counter");
+
+let CounterValue = 1;
+let basePriceValue = 0;
+
+function updatePrice() {
+    if (!modalPrice) return;
+    let totalPrice = basePriceValue * CounterValue;
+    modalPrice.textContent = `${totalPrice} ₴`;
+}
+
+if (getPlusButton && getCounter) {
+    getPlusButton.addEventListener("click", () => {
+        if (CounterValue < 10) {
+            CounterValue++;
+            getCounter.textContent = CounterValue;
+            updatePrice();
+        }
+    });
+}
+
+if (getMinusButton && getCounter) {
+    getMinusButton.addEventListener("click", () => {
+        if (CounterValue > 1) {
+            CounterValue--;
+            getCounter.textContent = CounterValue;
+            updatePrice();
+        }
+    });
+}
 
 cards.forEach(card => {
-    card.addEventListener('click', (e) => {
-        if (e.target.closest('.item__button')) {
-            return;
-        }
-
-        let nameEl = card.querySelector('.item__name');
-        let categoryEl = card.querySelector('.item__category');
-        let priceEl = card.querySelector('.item__price');
-        let imgEl = card.querySelector('.item__img');
-
-        if (!priceEl || !imgEl) {
-            return;
-        }
+    card.addEventListener("click", () => {
+        let nameEl = card.querySelector(".item__name");
+        let categoryEl = card.querySelector(".item__category");
+        let priceEl = card.querySelector(".item__price");
+        let imgEl = card.querySelector(".item__img");
 
         let text1 = nameEl ? nameEl.innerText : "";
         let text2 = categoryEl ? categoryEl.innerText : "";
 
         let titleText = text1.length > text2.length ? text1 : text2;
         let categoryText = text1.length > text2.length ? text2 : text1;
-
-        let productPrice = priceEl.innerText;
         let productImage = imgEl.src;
 
-        let modalTitle = modalBack.querySelector('.modal__text-title');
-        let modalPrice = modalBack.querySelector('.modal__text-price');
-        let modalImg = modalBack.querySelector('.modal__content > img');
-        let modalSuptitle = modalBack.querySelector('.modal__text-suptitle');
+        basePriceValue = parseInt(priceEl.innerText.replace(/\s+/g, ""));
 
-        if (modalTitle) {
-            modalTitle.innerText = titleText;
-        }
+        CounterValue = 1;
+        if (getCounter) getCounter.textContent = CounterValue;
+        updatePrice();
 
-        if (modalPrice) {
-            modalPrice.innerText = productPrice;
-        }
-
-        if (modalImg) {
-            modalImg.src = productImage;
-        }
-
-        if (modalSuptitle && categoryText) {
-            modalSuptitle.innerText = "URBN · " + text2;
-        }
-
-        if (modalBack) {
-            modalBack.style.display = "flex";
-        }
-
-        if (modal) {
-            modal.style.display = "flex";
-        }
+        modalTitle.innerText = titleText;
+        modalImg.src = productImage;
+        modalSuptitle.innerText = "URBN · " + categoryText;
+        modalBack.style.display = "flex";
+        modal.style.display = "flex";
     });
 });
 
-let getPlusButton = document.querySelector(".modal_chooseQuantity-plus");
-let getMinusButton = document.querySelector(".modal_chooseQuantity-minus");
-let getCounter = document.querySelector(".modal__chooseQuantity-counter");
-let CounterValue = 1;
+closeIcon.addEventListener("click", closeModal);
+modalBack.addEventListener("click", (e) => {
+    if (e.target === modalBack) {
+        closeModal();
+    }
+});
 
-if (getCounter) {
-    getCounter.textContent = CounterValue;
-}
-
-if (getPlusButton) {
-    getPlusButton.addEventListener("click", () => {
-        if (CounterValue !== 10) {
-            CounterValue = CounterValue + 1;
-        }
-        if (getCounter) getCounter.textContent = CounterValue;
-    });
-}
-
-if (getMinusButton) {
-    getMinusButton.addEventListener("click", () => {
-        if (CounterValue > 1) {
-            CounterValue = CounterValue - 1;
-        }
-        if (getCounter) {
-            getCounter.textContent = CounterValue;
-        }
-    });
-}
-
-if (closeIcon) {
-    closeIcon.addEventListener('click', () => {
-        if (modalBack) modalBack.style.display = 'none';
-        if (modal) {
-            modal.style.display = 'none';
-        }
-    });
-}
-
-if (modalBack) {
-    modalBack.addEventListener('click', (e) => {
-        if (e.target === modalBack) {
-            modalBack.style.display = 'none';
-            if (modal) {
-                modal.style.display = 'none';
-            }
-        }
-    });
+function closeModal() {
+    if (modalBack) modalBack.style.display = "none";
+    if (modal) modal.style.display = "none";
+    CounterValue = 1;
+    if (getCounter) getCounter.textContent = "1";
 }
