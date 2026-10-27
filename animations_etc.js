@@ -2,12 +2,21 @@ let getSwitcher = document.querySelector(".isInStock2");
 let getCircleSwitch = document.querySelector(".filter__sort-div-circle");
 if (getSwitcher && getCircleSwitch) {
     getSwitcher.addEventListener("change", () => {
+        let cards = document.querySelectorAll(".products__cards-item");
         if (getSwitcher.checked) {
             getCircleSwitch.style.transform = "translateX(25px)";
-            getCircleSwitch.style.backgroundColor = "#12fb0a";
+            getCircleSwitch.style.backgroundColor = "#30ff25";
+            cards.forEach(card => {
+                if (card.dataset.isInStock === "false") {
+                    card.style.display = "none";
+                }
+            });
         } else {
             getCircleSwitch.style.transform = "translateX(0)";
             getCircleSwitch.style.backgroundColor = "#FFFFFF";
+            cards.forEach(card => {
+                card.style.display = "";
+            });
         }
     });
 }
@@ -72,7 +81,7 @@ cards.forEach(card => {
         basePriceValue = parseInt(priceEl.innerText.replace(/\s+/g, ""));
 
         CounterValue = 1;
-        getCounter.textContent = CounterValue;
+        if (getCounter) getCounter.textContent = CounterValue;
         updatePrice();
 
         modalTitle.innerText = titleText;
@@ -91,8 +100,8 @@ modalBack.addEventListener("click", (e) => {
 });
 
 function closeModal() {
-    modalBack.style.display = "none";
-    modal.style.display = "none";
+    if (modalBack) modalBack.style.display = "none";
+    if (modal) modal.style.display = "none";
     CounterValue = 1;
-    getCounter.textContent = "1";
+    if (getCounter) getCounter.textContent = "1";
 }
