@@ -72,7 +72,7 @@ cards.forEach(card => {
         basePriceValue = parseInt(priceEl.innerText.replace(/\s+/g, ""));
 
         CounterValue = 1;
-        if (getCounter) getCounter.textContent = CounterValue;
+        getCounter.textContent = CounterValue;
         updatePrice();
 
         modalTitle.innerText = titleText;
@@ -91,8 +91,8 @@ modalBack.addEventListener("click", (e) => {
 });
 
 function closeModal() {
-    if (modalBack) modalBack.style.display = "none";
-    if (modal) modal.style.display = "none";
+    modalBack.style.display = "none";
+    modal.style.display = "none";
     CounterValue = 1;
-    if (getCounter) getCounter.textContent = "1";
+    getCounter.textContent = "1";
 }
