@@ -150,3 +150,24 @@ header {
     }
 }
 
+@media (max-width: 1200px) {
+    header {
+        nav {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    header .container .search .search__items {
+        display: none;
+    }
+
+    header .container .search {
+        min-width: 50px;
+
+         .search__cart {
+            width: 80%;
+         }
+    }
+}
