@@ -371,7 +371,6 @@ header .container .search .search__cart:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 1400px;
   padding: 50px 0;
   gap: 50px;
 }

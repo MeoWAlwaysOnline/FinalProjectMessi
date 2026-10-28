@@ -99,16 +99,16 @@
                 </div>
             </div>
         </section>
-        <section class="filter">
+        <section class="filter" id="catalog">
             <div class="container">
                 <h2 class="filter__title">Каталог</h2>
                 <p class="filter__subtitle">Обирай категорію, фільтруй за ціною та розміром — знайди свій образ.</p>
                 <div class="filter__mains">
-                    <button class="filter__mains-item">Усе</button>
-                    <button class="filter__mains-item">Кроссівки</button>
-                    <button class="filter__mains-item">Худі</button>
-                    <button class="filter__mains-item">Кепки</button>
-                    <button class="filter__mains-item">Футболки</button>
+                    <button class="filter__mains-item" id="filter__all">Усе</button>
+                    <button class="filter__mains-item" id="filter__shoes">Кроссівки</button>
+                    <button class="filter__mains-item" id="filter__hoodies">Худі</button>
+                    <button class="filter__mains-item" id="filter__caps">Кепки</button>
+                    <button class="filter__mains-item" id="filter__tshirts">Футболки</button>
                 </div>
                 <div class="filter__sort">
                     <div class="filter__sort-by">
@@ -116,9 +116,9 @@
                     </div>
                     <div class="filter__sort-instock">
                         <select class="filter__sort-price">
-                            <option>За замовчуванням</option>
-                            <option>Від найдешевшого</option>
-                            <option>Від найдорожчого</option>
+                            <option value="default">За замовчуванням</option>
+                            <option value="cheap">Від найдешевшого</option>
+                            <option value="expensive">Від найдорожчого</option>
                         </select>
                         <div class="filter__sort-isInStock">
                             <div class="filter__sort-allswitch">
@@ -133,7 +133,7 @@
                                     </div>
                                 <label for="isInStock">Тільки в наявності</label>
                             </div>
-                            <a type="reset" class="filter__sort-reset">Скинути фільтри</a>
+                            <a class="filter__sort-reset">Скинути фільтри</a>
                         </div>
                         
                     </div>
@@ -143,165 +143,6 @@
         <section class="products" id="products">
             <div class="container">
                 <div class="products__cards">
-                    <article class="products__cards-item open__modal-test">
-                        <img src="./src/images/Midnight_Court.jpg" alt="" class="item__img">
-                        <div>
-                            <h3 class="item__category">Кросівки</h3>
-                            <p class="item__name">Кросівки Vortex Runner</p>
-                            <span class="item__price">2399 ₴</span> <!--data price-->
-                            <button class="item__button">У кошик</button>
-                        </div>
-                    </article>
-
-                    <article class="products__cards-item open__modal-test">
-                        <img src="./src/images/Midnight_Court.jpg" alt="" class="item__img">
-                        <div>
-                            <h3 class="item__category">Кросівки</h3>
-                            <p class="item__name">Кросівки Midnight Court</p>
-                            <span class="item__price">1899 ₴</span>
-                            <button class="item__button">У кошик</button>
-                        </div>
-                    </article>
-
-                    <article class="products__cards-item open__modal-test" data-is-in-stock="false">
-                        <img src="./src/images/Lime_Pulse.jpg" alt="" class="item__img">
-                        <div>
-                            <h3 class="item__category">Кросівки</h3>
-                            <p class="item__name">Кросівки Lime Pulse</p>
-                            <span class="item__price">2199 ₴</span>
-                            <button class="item__button">Немає у наявності</button>
-                        </div>
-                    </article>
-
-                    <article class="products__cards-item open__modal-test">
-                        <img src="./src/images/Steel_Frame.jpg" alt="" class="item__img">
-                        <div>
-                            <h3 class="item__category">Кросівки</h3>
-                            <p class="item__name">Кросівки Steel Frame</p>
-                            <span class="item__price">2650 ₴ </span>
-                            <button class="item__button">У кошик</button>
-                        </div>
-                    </article>
-
-                    <article class="products__cards-item open__modal-test">
-                        <img src="./src/images/Худі_Blockletter.jpg" alt="" class="item__img">
-                        <div>
-                            <h3 class="item__category">Худі</h3>
-                            <p class="item__name">Худі Blockletter</p>
-                            <span class="item__price">1450 ₴</span>
-                            <button class="item__button">У кошик</button>
-                        </div>
-                    </article>
-
-                    <article class="products__cards-item open__modal-test">
-                        <img src="./src/images/Худі_Cloudwash.jpg" alt="" class="item__img">
-                        <div>
-                            <h3 class="item__category">Худі</h3>
-                            <p class="item__name">Худі Cloudwash</p>
-                            <span class="item__price">1590 ₴</span>
-                            <button class="item__button">У кошик</button>
-                        </div>
-                    </article>
-
-                    <article class="products__cards-item open__modal-test" data-is-in-stock="false">
-                        <img src="./src/images/Худі_Night_Signal.jpg" alt="" class="item__img">
-                        <div>
-                            <h3 class="item__category">Худі</h3>
-                            <p class="item__name">Худі Night Signal</p>
-                            <span class="item__price">1690 ₴</span>
-                            <button class="item__button">Не має в наявності</button>
-                        </div>
-                    </article>
-
-                    <article class="products__cards-item open__modal-test">
-                        <img src="./src/images/Худі_Concrete.jpg" alt="" class="item__img">
-                        <div>
-                            <h3 class="item__category">Худі</h3>
-                            <p class="item__name">Худі Concrete</p>
-                            <span class="item__price">1380 ₴</span>
-                            <button class="item__button">У кошик</button>
-                        </div>
-                    </article>
-
-                    <article class="products__cards-item open__modal-test">
-                        <img src="./src/images/Кепка_Low_Arc.jpg" alt="" class="item__img">
-                        <div>
-                            <h3 class="item__category">Кепки</h3>
-                            <p class="item__name">Кепка Low Arc</p>
-                            <span class="item__price">599 ₴</span>
-                            <button class="item__button">У кошик</button>
-                        </div>
-                    </article>
-
-                    <article class="products__cards-item open__modal-test">
-                        <img src="./src/images/Кепка_Fieldwork.jpg" alt="" class="item__img">
-                        <div>
-                            <h3 class="item__category">Кепки</h3>
-                            <p class="item__name">Кепка Fieldwork</p>
-                            <span class="item__price">649 ₴</span>
-                            <button class="item__button">У кошик</button>
-                        </div>
-                    </article>
-
-                    <article class="products__cards-item open__modal-test" data-is-in-stock="false">
-                        <img src="./src/images/Кепка_Nightshade.jpg" alt="" class="item__img">
-                        <div>
-                            <h3 class="item__category">Кепки</h3>
-                            <p class="item__name">Кепка Nightshade</p>
-                            <span class="item__price">620 ₴</span>
-                            <button class="item__button">Не має в наявності</button>
-                        </div>
-                    </article>
-
-                    <article class="products__cards-item open__modal-test">
-                        <img src="./src/images/Кепка_Sunline.jpg" alt="" class="item__img">
-                        <div>
-                            <h3 class="item__category">Кепки</h3>
-                            <p class="item__name">Кепка Sunline</p>
-                            <span class="item__price">549 ₴</span>
-                            <button class="item__button">У кошик</button>
-                        </div>
-                    </article>
-                    
-                    <article class="products__cards-item open__modal-test">
-                        <img src="./src/images/Футболка_Base_Tee.jpg" alt="" class="item__img">
-                        <div>
-                            <h3 class="item__category">Футболки</h3>
-                            <p class="item__name">Футболка Base Tee</p>
-                            <span class="item__price">490 ₴</span>
-                            <button class="item__button">У кошик</button>
-                        </div>
-                    </article>
-
-                    <article class="products__cards-item open__modal-test">
-                        <img src="./src/images/Футболка_Blockprint.jpg" alt="" class="item__img">
-                        <div>
-                            <h3 class="item__category">Футболки</h3>
-                            <p class="item__name">Футболка Blockprint</p>
-                            <span class="item__price">590 ₴</span>
-                            <button class="item__button">У кошик</button>
-                        </div>
-                    </article>
-
-                    <article class="products__cards-item open__modal-test" data-is-in-stock="false">
-                        <img src="./src/images/Футболка_Skyline.jpg" alt="" class="item__img">
-                        <div>
-                            <h3 class="item__category">Футболки</h3>
-                            <p class="item__name">Футболка Skyline</p>
-                            <span class="item__price">540 ₴</span>
-                            <button class="item__button">Не має в наявності</button>
-                        </div>
-                    </article>
-
-                    <article class="products__cards-item">
-                        <img src="./src/images/Футболка_Mono_Logo.jpg" alt="" class="item__img">
-                        <div>
-                            <h3 class="item__category">Футболки</h3>
-                            <p class="item__name">Футболка Mono Logo</p>
-                            <span class="item__price">470 ₴</span>
-                            <button class="item__button">У кошик</button>
-                        </div>
-                    </article>
                 </div>
             </div>
         </section>
@@ -386,10 +227,10 @@
             </div>
             <div class="footer__info">
                 <h2>Категорії</h2>
-                <a href="#"><p>Кросівки</p></a>
-                <a href="#"><p>Худі</p></a>
-                <a href="#"><p>Кепки</p></a>
-                <a href="#"><p>Футболки</p></a>
+                <a href="#products"><p>Кросівки</p></a>
+                <a href="#products"><p>Худі</p></a>
+                <a href="#products"><p>Кепки</p></a>
+                <a href="#products"><p>Футболки</p></a>
             </div>
             <div class="footer__info">
                 <h2>Контакти</h2>
@@ -441,6 +282,7 @@
         </div>
     </div>
 
+    <script src="./cards_create.js"></script>
     <script src="./animations_etc.js"></script>
     <script src="./cart.js"></script>
 </body>

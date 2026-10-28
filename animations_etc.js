@@ -1,26 +1,3 @@
-let getSwitcher = document.querySelector(".isInStock2");
-let getCircleSwitch = document.querySelector(".filter__sort-div-circle");
-if (getSwitcher && getCircleSwitch) {
-    getSwitcher.addEventListener("change", () => {
-        let cards = document.querySelectorAll(".products__cards-item");
-        if (getSwitcher.checked) {
-            getCircleSwitch.style.transform = "translateX(25px)";
-            getCircleSwitch.style.backgroundColor = "#30ff25";
-            cards.forEach(card => {
-                if (card.dataset.isInStock === "false") {
-                    card.style.display = "none";
-                }
-            });
-        } else {
-            getCircleSwitch.style.transform = "translateX(0)";
-            getCircleSwitch.style.backgroundColor = "#FFFFFF";
-            cards.forEach(card => {
-                card.style.display = "";
-            });
-        }
-    });
-}
-
 let modalBack = document.querySelector(".modal-back");
 let modal = document.querySelector(".modal");
 let cards = document.querySelectorAll(".products__cards-item");
@@ -64,32 +41,35 @@ if (getMinusButton && getCounter) {
     });
 }
 
-cards.forEach(card => {
-    card.addEventListener("click", () => {
-        let nameEl = card.querySelector(".item__name");
-        let categoryEl = card.querySelector(".item__category");
-        let priceEl = card.querySelector(".item__price");
-        let imgEl = card.querySelector(".item__img");
+let cardsContainer = document.querySelector(".products__cards");
 
-        let text1 = nameEl ? nameEl.innerText : "";
-        let text2 = categoryEl ? categoryEl.innerText : "";
+cardsContainer.addEventListener("click", (e) => {
+    let card = e.target.closest(".products__cards-item");
 
-        let titleText = text1.length > text2.length ? text1 : text2;
-        let categoryText = text1.length > text2.length ? text2 : text1;
-        let productImage = imgEl.src;
+    let nameEl = card.querySelector(".item__name");
+    let categoryEl = card.querySelector(".item__category");
+    let priceEl = card.querySelector(".item__price");
+    let imgEl = card.querySelector(".item__img");
 
-        basePriceValue = parseInt(priceEl.innerText.replace(/\s+/g, ""));
+    let text1 = nameEl ? nameEl.innerText : "";
+    let text2 = categoryEl ? categoryEl.innerText : "";
 
-        CounterValue = 1;
-        if (getCounter) getCounter.textContent = CounterValue;
-        updatePrice();
+    let titleText = text1.length > text2.length ? text1 : text2;
+    let categoryText = text1.length > text2.length ? text2 : text1;
 
-        modalTitle.innerText = titleText;
-        modalImg.src = productImage;
-        modalSuptitle.innerText = "URBN · " + categoryText;
-        modalBack.style.display = "flex";
-        modal.style.display = "flex";
-    });
+    basePriceValue = parseInt(priceEl.innerText.replace(/\s+/g, ""));
+
+    CounterValue = 1;
+    if (getCounter) getCounter.textContent = CounterValue;
+
+    updatePrice();
+
+    modalTitle.innerText = titleText;
+    modalImg.src = imgEl.src;
+    modalSuptitle.innerText = "URBN · " + categoryText;
+
+    modalBack.style.display = "flex";
+    modal.style.display = "flex";
 });
 
 closeIcon.addEventListener("click", closeModal);
